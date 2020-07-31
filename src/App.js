@@ -28,11 +28,11 @@ function App() {
       </div>
       <footer>
         <div className='footer'>
-          Built with {' '}
+          Built/copied with {' '}
           <span role='img' aria-label='love'>
             💚
           </span>{''}
-          &nbsp; by Shedrack Akintayo
+          &nbsp; by Stacy Hoggarth
         </div>
       </footer>
     </div>
