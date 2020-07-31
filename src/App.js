@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import List from './components/List';
 import withListLoading from './components/withListLoading';
+import axios from 'axios'
+
 function App() {
   const ListLoading = withListLoading(List);
   const [appState, setAppState] = useState({
@@ -9,6 +11,9 @@ function App() {
     repos: null,
   });
 
+
+
+  /*  Using Fetch()
   useEffect(() => {
     setAppState({ loading: true });
     const apiUrl = `https://api.github.com/users/stacyhoggarth/repos`;
@@ -17,6 +22,16 @@ function App() {
       .then((repos) => {
         setAppState({ loading: false, repos: repos });
       });
+  }, [setAppState]); 
+  */
+
+  useEffect(() => {
+    setAppState({ loading: true });
+    const apiUrl = 'https://api.github.com/users/stacyhoggarth/repos';
+    axios.get(apiUrl).then((repos) => {
+      const allRepos = repos.data;
+      setAppState({ loading: false, repos: allRepos });
+    });
   }, [setAppState]);
   return (
     <div className='App'>

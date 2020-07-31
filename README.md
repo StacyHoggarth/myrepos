@@ -1,3 +1,6 @@
+This project was a sample created from this article 
+https://www.smashingmagazine.com/2020/06/rest-api-react-fetch-axios/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
